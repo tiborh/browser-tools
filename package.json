@@ -1,0 +1,23 @@
+{
+  "name": "@tiborh/browser-tools",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Shared, opt-in Playwright MCP launcher for local projects",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "bin": {
+    "browser-tools-mcp": "./launch.mjs"
+  },
+  "scripts": {
+    "test": "node --test test/browser.test.mjs",
+    "smoke": "node --test test/smoke.test.mjs",
+    "browser:install": "playwright install chromium --no-shell",
+    "check": "node launch.mjs --check"
+  },
+  "dependencies": {
+    "@playwright/mcp": "0.0.84",
+    "playwright": "1.65.0-alpha-2026-10-30"
+  }
+}
