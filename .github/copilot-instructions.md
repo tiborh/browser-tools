@@ -20,6 +20,8 @@ npm run smoke
 
 CI (`.github/workflows/test.yml`) runs unit tests and a separate managed-Chromium smoke job on Node.js 22. The smoke job explicitly installs Chromium and its Linux system dependencies, then allows user namespaces for that executable via a CI-only AppArmor profile so Chromium's sandbox stays enabled. There is no build or lint script.
 
+CodeQL default setup analyzes JavaScript and Actions. Dependency review checks PR dependency changes for known vulnerabilities. The `main` ruleset requires PRs with passing `unit`, `smoke`, and `dependency-review` checks and resolved review threads; reviewer approval is not required.
+
 ## Architecture
 
 This package provides the `browser-tools-mcp` executable for projects that opt in to a shared local Playwright MCP launcher. It is not a hosted service or a replacement for consumers' own browser-test dependencies.
