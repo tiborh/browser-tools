@@ -18,7 +18,7 @@ npm run smoke
 - `npm run smoke` exercises a real MCP browser session, including a screenshot in a temporary consuming workspace. It requires a usable browser.
 - To explicitly download the pinned managed Chromium, run `npm run browser:install`. To smoke-test it specifically, run `BROWSER_TOOLS_BROWSER=managed npm run smoke`. Browser installation uses the user's Playwright cache and does not provision Linux system libraries.
 
-CI (`.github/workflows/test.yml`) runs `npm ci` and `npm test` on Node.js 22, not the smoke test. There is no build or lint script.
+CI (`.github/workflows/test.yml`) runs unit tests and a separate managed-Chromium smoke job on Node.js 22. The smoke job explicitly installs Chromium and its Linux system dependencies. There is no build or lint script.
 
 ## Architecture
 
