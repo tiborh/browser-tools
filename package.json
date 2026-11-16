@@ -17,7 +17,7 @@
     "check": "node launch.mjs --check"
   },
   "dependencies": {
-    "@playwright/mcp": "0.0.84",
-    "playwright": "1.65.0-alpha-2026-10-30"
+    "@playwright/mcp": "0.0.85",
+    "playwright": "1.65.1"
   }
 }
